@@ -1,0 +1,43 @@
+<!-- Form iscrizione Corso Blazar -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="./search-user.php" method="get">
+        <fieldset>
+          <legend>Iscrizione al Corso Blazar</legend>
+          <label for="nome">Nome:</label><br>
+          <input id="nome" name="nome">
+          <br>
+          <label for="cognome">Cognome:</label><br>
+          <input id="cognome" name="cognome">
+          <br>
+          <label for="eta">Età:</label><br>
+          <input id="eta" name="eta">
+          <p>Pizza o sushi?</p>
+          <input id="p-radio" type="radio" name="food">  <!-- Qua (23 e 26 e 29)non capisco proprio come funziona "name" e "value" (che ho omesso)-->
+          <label for="pizza-radio">Pizza</label>
+          <br>
+          <input id="s-radio" type="radio" name="food">
+          <label for="s-radio">Sushi</label>
+          <br>
+          <input id="t-radio" type="radio" name="food">
+          <label for="t-radio">Basta che se magna</label>
+          <br><br>
+          <p>Quanto ti piace l'informatica?</p>
+          <input type="range">
+          <br>
+          <p>Allega il tuo CV se proprio hai voglia</p>
+          <input type="file">
+          <br><br>
+          <button type="submit">Invia</button>
+        </fieldset>  
+          
+      </form>
+</body>
+</html>
