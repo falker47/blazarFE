@@ -1,0 +1,61 @@
+/* Website Style */
+
+body {
+    
+    background-image: url("https://images03.nicepage.com/c461c07a441a5d220e8feb1a/9c4ea5b834cd5c25a814ec11/z-min.jpg");
+    color: white;
+}
+
+.website__header {
+    text-align: center;
+    margin-top: 5%;
+}
+
+.website__header__title{
+    font-size: 40px;
+    font-family: 'Roboto Slab', serif;
+    font-weight: lighter;
+    margin: 0;
+}
+
+.website__header__divider{
+    font-size: 50px;
+    font-weight: bolder;
+
+}
+
+.website__solutions {
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 70px;
+    height: 250px;
+    
+}
+
+.website__solutions__leadership {
+    border: 2px solid orange;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.551);
+    margin: 10px;
+    width: 175px;
+    
+}
+
+.website__solutions__careers{
+    border: 2px solid rgb(41, 121, 225);
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.551);
+    margin: 10px;
+    width: 175px;
+}
+
+.website__solutions__partnerships{
+    border: 2px solid green;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.551);
+    margin: 10px;
+    width: 175px;
+}
+
