@@ -2,6 +2,7 @@
 
 body {
     background-image: url("https://images03.nicepage.com/c461c07a441a5d220e8feb1a/9c4ea5b834cd5c25a814ec11/z-min.jpg");
+    background-position: center;
     color: white;
 }
 
@@ -11,7 +12,7 @@ body {
 }
 
 .website__header__title{
-    font-size: 60px;
+    font-size: 450%;
     font-family: 'Roboto Slab', serif;
     font-weight: lighter;
     margin: 0;
@@ -38,8 +39,8 @@ body {
     padding: 10px;
     background-color: rgba(0, 0, 0, 0.8);
     margin: 10px;
-    width: 20%;
-    height: 275px;
+    width: 325px;
+    height: 250px;
     
 }
 
@@ -58,7 +59,7 @@ body {
     width: fit-content;
     height: fit-content;
     margin: 5%;
-    margin-bottom: 5%;
+    margin-top: 25px;
 }
 
 .website__solutions__careers{
@@ -66,8 +67,8 @@ body {
     padding: 10px;
     background-color: rgba(0, 0, 0, 0.8);
     margin: 10px;
-    width: 20%;
-    height: 275px;
+    width: 325px;
+    height: 250px;
 }
 
 .website__solutions__careers__icon{
@@ -85,7 +86,7 @@ body {
     width: fit-content;
     height: fit-content;
     margin: 5%;
-    margin-bottom: 5%;
+    margin-top: 25px;
 }
 
 .website__solutions__partnerships{
@@ -93,8 +94,8 @@ body {
     padding: 10px;
     background-color: rgba(0, 0, 0, 0.8);
     margin: 10px;
-    width: 20%;
-    height: 275px;
+    width: 325px;
+    height: 250px;
 }
 
 .website__solutions__partnerships__icon{
@@ -112,6 +113,132 @@ body {
     width: fit-content;
     height: fit-content;
     margin: 5%;
-    margin-bottom: 5%;
+    margin-top: 25px;
 }
+/*THIN SCREEN MODE (width)*/
+@media (max-width: 900px) {
+    .website__header__title{
+        font-size: 400%;
+    }
+    .website__solutions {
+        font-family: 'Open Sans', sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 350px;  
+    }
+    
+    .website__solutions__leadership {
+        border: 2px solid orange;
+        padding: 10px;
+        background-color: rgba(0, 0, 0, 0.8);
+        margin: 10px;
+        width: 425px;
+        height: 225px;
+        
+    }
+    
+    .website__solutions__careers{
+        border: 2px solid rgb(41, 121, 225);
+        padding: 10px;
+        background-color: rgba(0, 0, 0, 0.8);
+        margin: 10px;
+        width: 425px;
+        height: 225px;
+    }
+    
+    .website__solutions__partnerships{
+        border: 2px solid green;
+        padding: 10px;
+        background-color: rgba(0, 0, 0, 0.8);
+        margin: 10px;
+        width: 425px;
+        height: 225px;
+    }
 
+  }
+
+  /*WIDE SCREEN MODE*/
+  @media(min-width: 1400px)
+  {
+    .website__header__title{
+          font-size: 550%;
+    }
+
+    .website__solutions {
+        font-family: 'Open Sans', sans-serif;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 70px;
+        height: 250px; 
+    }
+    
+    .website__solutions__leadership {
+        border: 2px solid orange;
+        padding: 10px;
+        background-color: rgba(0, 0, 0, 0.8);
+        margin: 10px;
+        width: 25%;
+        height: 115%;
+    }
+    
+    .website__solutions__leadership__title{
+        text-align: center;
+        font-size: 200%;
+    }
+    
+    .website__solutions__leadership__text{
+        text-align: center;
+        width: fit-content;
+        height: fit-content;
+        margin: 5%;
+        margin-top: 25px;
+        font-size: 125%;
+    }
+    
+    .website__solutions__careers{
+        border: 2px solid rgb(41, 121, 225);
+        padding: 10px;
+        background-color: rgba(0, 0, 0, 0.8);
+        margin: 10px;
+        width: 25%;
+        height: 115%;
+    }
+    
+    .website__solutions__careers__title{
+        text-align: center;
+        font-size: 200%;
+    }
+    
+    .website__solutions__careers__text{
+        text-align: center;
+        width: fit-content;
+        height: fit-content;
+        margin: 5%;
+        font-size: 125%;
+    }
+    
+    .website__solutions__partnerships{
+        border: 2px solid green;
+        padding: 10px;
+        background-color: rgba(0, 0, 0, 0.8);
+        margin: 10px;
+        width: 25%;
+        height: 115%;
+    }
+    
+    .website__solutions__partnerships__title{
+        text-align: center;
+        font-size: 200%;
+    }
+    
+    .website__solutions__partnerships__text{
+        text-align: center;
+        width: fit-content;
+        height: fit-content;
+        margin: 5%;
+        font-size: 125%;
+    }
+    
+  }
