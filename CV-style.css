@@ -1,27 +1,43 @@
 body {
-    background-image: linear-gradient(to top, rgb(114, 156, 204), white);
+    background-image: linear-gradient(to top, rgba(105, 156, 215, 0.329), white);
     background-color: rgb(114, 156, 204);
     font-family: 'Noto Serif';
     background-repeat: no-repeat;
 }
 
-header {
+header{
+    display: flex;
+    flex-direction: row;
+}
+
+.CV__fullname {
     font-weight: 700;
-    font-size: 1.1rem;
-    text-align: center;
+    font-size: 40px;
+    display: flex;
+    align-self: center;
     font-style: italic;
 }
 
-.Everything {
+.CV {
     display: flex;
     justify-content: space-around;
 }
 
-.Contatti_Istruzione {
-    margin-right: 15px;
+.CV__sx{
+    margin-left: 5px;
+    margin-right: 2.5%;
 }
 
-.Lingue_Competenze {
-    text-align: center;
-    margin-right: 15px;
+img{
+    border-radius: 50%;
+    width: 100px;
+    border: 1px solid rgba(0, 0, 0, 0.544);
 }
+
+.CV__dx {
+    margin-left: 2.5%;
+    margin-right: 5px;
+}
+
+.CV__lingue__tabella{
+    text-align: center;}

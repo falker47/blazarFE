@@ -13,36 +13,44 @@
 <body>
 
   <header>
-    <h1>
+    <div class="CV__pic">
+      <img src="https://i.postimg.cc/c4hhS7Ty/foto-cv-square.jpg">
+    </div>
+    <h1 class="CV__fullname">
       <strong>Maurizio Falconi</strong>
     </h1>
   </header>
 
-  <div class="Everything">
-    <div class="Contatti_Istruzione">
-      <h2>Contatti</h2>
-      <p><b>Mail:</b> maurizio.falconi47@gmail.com</p>
-      <p><b>Telefono:</b> 3454860367</p>
-      <p><b>Indirizzo:</b> via 25 Aprile 138, Cinisello Balsamo (MI)</p>
-      <br>
-      <h2>Istruzione</h2>
-      <p>Diploma di scuola superiore<br>
-        presso IPSEOA Carlo Porta</p>
-    </div>
+  <div class="CV">
+    <div class="CV__sx">
+      
+      <h2 class="CV__sx__contatti__title">Contatti</h2>
+      <p class="CV__sx__contatti__text"><b>Mail:</b> maurizio.falconi47@gmail.com<br>
+        <b>Telefono:</b> +39 3454860367<br>
+        <b>Indirizzo:</b> via 25 Aprile 138,<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <!-- C'è un modo più intelligente per mettere l'indirizzo allineato?-->
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <!-- o una sintassi più compatta di questo comando? una tabella forse? -->
+        Cinisello Balsamo (MI)
+      </p>
 
-    <div class="Lingue_Competenze">
-      <h2>Lingue</h2>
-      <table class:="tabella">
+      <div class="CV__sx">
+        <h2 class="CV__sx__istruzione__title">Istruzione</h2>
+        <p class="CV__sx__istruzione__testo">Diploma di scuola superiore<br>
+          presso IPSEOA Carlo Porta</p>
+      </div>
+
+      <h2 class:="CV__sx__lingue__title">Lingue</h2>
+      <table class:="CV__sx__lingue__tabella">
         <thead>
-          <tr> <!-- Table row -->
-            <th> </th> <!-- table heading -->
+          <tr>
+            <th> </th>
             <th>Livello Scritto</th>
             <th>Livello Orale</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>Inglese</td> <!-- table data -->
+            <td>Inglese</td>
             <td>C1</td>
             <td>C1</td>
           </tr>
@@ -59,16 +67,29 @@
         </tbody>
       </table>
 
-      <h2>Competenze Informatiche</h2>
-      <ul>
+      <h2 class="CV__left__comp_informatiche__title">Competenze Informatiche</h2>
+      <ul class="CV__left__comp_informatiche__list">
         <li>Ho superato i 24 livelli di Flexbox Froggy</li>
         <li>Linguaggi di Programmazione:
-            Python, C, C++</li>
+          Python, C, C++</li>
         <li>Pacchetto Office</li>
         <li>Video Making/Editing & PhotoShop</li>
       </ul>
-    </div>
-  </div>
+
+    </div> <!-- chiude "CV__sx" -->
+
+    <div class="CV__dx">
+
+      <h2 class="CV__dx__exp_lavorative__title">
+        <b>Esperienze lavorative</b>
+      </h2>
+      <p class="CV__dx__exp_lavorative__text">
+
+      </p>
+
+    </div> <!-- chiude "CV__dx" -->
+
+  </div> <!-- chiude "CV" -->
 
 
 </body>
