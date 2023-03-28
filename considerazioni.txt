@@ -1,0 +1,23 @@
+Penso che potresti usare elementi più semantici di div, prova a vedere i seguenti:
+main
+article
+section
+
+Hai finito per mettere davanti ad ogni classe la parola website...il che la rende inutile per migliorare la lettura del codice :D
+se la togliessi ovunque avresti classi con nome più corto e più leggibile
+
+Occhio quando imposti altezze con valori assoluti (es. height: 250px), se il contenuto richiedesse più spazio
+questo andrebbe in overflow. Usa piuttosto un'altezza minimna se hai bisogno che l'elemento raggiunga un certo punto verticalmente. In questo modo
+se il contenuto fosse più grande del previsto, si prendererebbe tutto lo spazio verticale che gli serve. 
+
+Per questo esercizio ti saresti potuto risparmiare il media query con un flex-wrap e impostanto una larghezza minima sulle card in modo che, 
+qualora non avessero avuto più spazio sarebbero andate a capo.
+
+Il css è un po' troppo copincollato...astrai alcuni elementi comuni (ti ho lasciato un esempio)
+
+In definitiva il sito c'è, ed è responsive! quindi complimenti!
+
+Ripulisci e rifattorizza (modifica il codice senza modificare il risultato) e poi prova a cimentarti con questo sito:
+https://nicepage.com/templates/preview/happiness-consulting-2847475?device=desktop
+
+vediamo come te la cavi con un sito più lungo...
