@@ -6,23 +6,43 @@ function reverseArray(a) {
     let n=0;   
        for (const element of a){
            n++
-       }
+    }
        for (let i=0; i<n-1; i++){
-           a.unshift(a[(2*i)+1]);
-       }
+           a.unshift(a[(2*i)+1
+        ]);
+    }
        for(let i=0; i<n-1; i++)
        {
            a.pop()
-       }
+    }
        return a;
-   }
+}
 
 
-   // Esercizio 2
-   function simpleArraySum(ar) {
+// Esercizio 2
+function simpleArraySum(ar) {
     let sum = 0;
     for (const element of ar){
         sum += element;
     }
     return sum;
+}
+
+
+//Esercizio 3
+function staircase(n) {
+    for (let i=1; i<=n; i++)
+    {
+        let string = "";
+        for(let spaces=1; spaces<=n-i; spaces++) //spaces rappresenta il n di hashtag da stampare
+        {
+            string += " "
+        }
+        for(let hashtags=1; hashtags<=i; hashtags++) //hashtags rappresenta il n di hashtag da stampare
+        {
+            string += "#";
+        }
+        
+        console.log(string);
+    }
 }
