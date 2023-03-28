@@ -1,12 +1,1 @@
 // Esercizio 1 (ho voluto usare solo le funzioni che ha spiegato oggi, sennò mi sembrava di cheattare
-
-function reverseArray(a) {
-    for (let i=0; i<3; i++){
-        a.unshift(a[(2*i)+1]);
-    }
-    for(let i=0; i<3; i++)
-    {
-        a.pop()
-    }
-    return a;
-}
