@@ -16,3 +16,13 @@ function reverseArray(a) {
        }
        return a;
    }
+
+
+   // Esercizio 2
+   function simpleArraySum(ar) {
+    let sum = 0;
+    for (const element of ar){
+        sum += element;
+    }
+    return sum;
+}
