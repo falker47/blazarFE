@@ -29,7 +29,7 @@ function simpleArraySum(ar) {
 }
 
 
-//Esercizio 3
+// Esercizio 3
 function staircase(n) {
     for (let i=1; i<=n; i++)
     {
@@ -45,4 +45,20 @@ function staircase(n) {
         
         console.log(string);
     }
+}
+
+// Esercizio 4 (giusto al primo tentativo, ci sto prendendo gusto ;))
+function divisibleSumPairs(n, k, ar) {
+    let counter_of_magic_number = 0;
+    for(let i=0; i<n; i++)
+    {
+        for(let j=i+1; j<n; j++)
+        {
+            if( (ar[i]+ar[j])%k == 0)
+            {
+                counter_of_magic_number++;
+            }
+        }
+    }
+    return counter_of_magic_number;
 }
