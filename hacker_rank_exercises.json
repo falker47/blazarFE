@@ -17,6 +17,8 @@ function reverseArray(a) {
     }
        return a;
 }
+
+
 // Esercizio 2
 function simpleArraySum(ar) {
     let sum = 0;
@@ -25,6 +27,8 @@ function simpleArraySum(ar) {
     }
     return sum;
 }
+
+
 // Esercizio 3
 function staircase(n) {
     for (let i=1; i<=n; i++)
@@ -42,6 +46,7 @@ function staircase(n) {
         console.log(string);
     }
 }
+
 // Esercizio 4 (giusto al primo tentativo, ci sto prendendo gusto ;))
 function divisibleSumPairs(n, k, ar) {
     let counter_of_magic_number = 0;
@@ -49,9 +54,7 @@ function divisibleSumPairs(n, k, ar) {
     {
         for(let j=i+1; j<n; j++)
         {
-            if( (ar[i
-            ]+ar[j
-            ])%k == 0)
+            if( (ar[i]+ar[j])%k == 0)
             {
                 counter_of_magic_number++;
             }
@@ -59,30 +62,20 @@ function divisibleSumPairs(n, k, ar) {
     }
     return counter_of_magic_number;
 }
+
 // Esercizio 5
 function compareTriplets(a, b) {
-    let scoreboard = [
-        0,
-        0
-    ];
+    let scoreboard = [0, 0];
     for(let i=0; i<3; i++)
     {
-        if(a[i
-        ] > b[i
-        ])
+        if(a[i] > b[i])
         {
-            scoreboard[
-                0
-            ]++;
+            scoreboard[0]++;
         }
-        else if(a[i
-        ] < b[i
-        ])
+        else if(a[i] < b[i])
         {
-            scoreboard[
-                1
-            ]++;
+            scoreboard[1]++;
         }
     }
     return scoreboard;
-}
+    }
