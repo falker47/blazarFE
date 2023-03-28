@@ -1,1 +1,18 @@
-// Esercizio 1 (ho voluto usare solo le funzioni che ha spiegato oggi, sennò mi sembrava di cheattare
+// Esercizio 1 
+// sicuramente ci sarà un algoritmo più efficiente, ma mi chiedevo se fosse
+//possibile efficientarlo ulteriormente con ciò che abbiamo già visto
+
+function reverseArray(a) {
+    let n=0;   
+       for (const element of a){
+           n++
+       }
+       for (let i=0; i<n-1; i++){
+           a.unshift(a[(2*i)+1]);
+       }
+       for(let i=0; i<n-1; i++)
+       {
+           a.pop()
+       }
+       return a;
+   }
