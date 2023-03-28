@@ -79,3 +79,27 @@ function compareTriplets(a, b) {
     }
     return scoreboard;
     }
+
+// Esercizio 6
+function hourglassSum(arr) {
+    let hourglass_max_sum=-Infinity;
+    let hg_t_sum=0;
+    
+    for(let i=1; i<=4; i++)
+    {
+        for(let j=1; j<=4; j++)
+        {
+            {
+                hg_t_sum = 0;                                        // l'ho scritto così anzichè mettere altri cicli "for" perchè mi sembrava
+                hg_t_sum += arr[i-1][j-1]+arr[i-1][j]+arr[i-1][j+1]; // più leggibile e carino (in teoria non ha nemmeno perso efficienza, giusto?)
+                hg_t_sum += arr[i][j];                               // se avessi scritto la somma con tutti gli addendi in una botta
+                hg_t_sum += arr[i+1][j-1]+arr[i+1][j]+arr[i+1][j+1]; // sola sarebbe stato più efficiente?
+                if(hg_t_sum > hourglass_max_sum)                      
+                {
+                hourglass_max_sum = hg_t_sum;
+                }
+            }
+        }
+    }
+    return hourglass_max_sum;
+}
