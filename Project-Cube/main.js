@@ -7,10 +7,15 @@ const renderer = new THREE.WebGLRenderer();
 renderer.setSize( window.innerWidth, window.innerHeight );
 document.body.appendChild( renderer.domElement );
 
+const light = new THREE.PointLight("white");
 const geometry = new THREE.BoxGeometry( 1, 1, 1 );
-const material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
+const material = new THREE.MeshStandardMaterial( { color: 0x00ff00} );
 const cube = new THREE.Mesh( geometry, material );
-scene.add( cube );
+scene.add(cube);
+light.position.x = 10;
+light.position.y = 10;
+light.position.z = 10;
+scene.add(light);
 
 camera.position.z = 5;
 
