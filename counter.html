@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Angular Increment/Decrement Example</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+	<script>
+		var app = angular.module('myApp', []);
+		app.controller('myCtrl', function($scope) {
+			$scope.myNumber = 0;
+
+			$scope.incrementNumber = function() {
+				$scope.myNumber++;
+			};
+
+			$scope.decrementNumber = function() {
+				$scope.myNumber--;
+			};
+		});
+	</script>
+</head>
+<body ng-app="myApp" ng-controller="myCtrl">
+	<p>The number is: {{myNumber}}</p>
+	<button ng-click="incrementNumber()">Increment</button>
+	<button ng-click="decrementNumber()">Decrement</button>
+</body>
+</html>
