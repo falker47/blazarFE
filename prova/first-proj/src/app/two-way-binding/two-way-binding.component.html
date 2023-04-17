@@ -1,0 +1,9 @@
+
+<button mat-button color="primary" (click)="onClick($event)" >Invio</button>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Favorite food</mat-label>
+    <input matInput placeholder="Ex. Pizza" [(ngModel)]="title">
+  </mat-form-field>
+
+  <p>{{title}}</p>

@@ -1,0 +1,30 @@
+COMMANDS
+
+-ng new "nome progetto"
+
+-cd "nome progetto"
+
+-ng add @angular/material
+
+-ng g c "nome componente"
+
+
+
+// DISPLAY A COMPONENT
+// You need to import the MatSlideToggleModule that you want to display by adding the following lines to your app.module.ts file.
+
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+
+@NgModule ({
+  imports: [
+    MatSlideToggleModule,
+  ]
+})
+class AppModule {}
+
+//Add the <mat-slide-toggle> tag to the app.component.html like so:
+
+<mat-slide-toggle>Toggle me!</mat-slide-toggle>
+
+-ng serve
+

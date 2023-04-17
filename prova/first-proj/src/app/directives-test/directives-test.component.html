@@ -1,0 +1,19 @@
+<ng-template *ngIf="isVisible;then bloccoIf else bloccoElse"> Sono visibile</ng-template>
+<ng-template #bloccoIf> sono bloccoif, dunque isvisible è true</ng-template>
+<ng-template #bloccoElse> sono bloccoelse, dunque isvisible è false</ng-template>
+
+<div [ngSwitch]="cibo">
+  <p *ngSwitchCase="'Pizza'">uno</p>
+  <p *ngSwitchCase="'Sushi'">due</p>
+</div>
+
+<div [ngSwitch]="numero">
+  <p *ngSwitchCase="1">uno</p>
+  <p *ngSwitchCase="2">due</p>
+  <p *ngSwitchCase="3">tre</p>
+</div>
+
+  <div *ngFor="let persona of persone">
+    <div class="Status"[ngStyle]="{'background': persona.isOnline ? 'green' : 'red'}"></div>
+    <p class="Persone">{{ persona.nome }} {{persona.cognome}}</p>
+    </div>
