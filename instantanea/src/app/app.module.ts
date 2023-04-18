@@ -12,6 +12,7 @@ import { ProfileHeaderComponent } from './profile-header/profile-header.componen
 import { SocialLogoComponent } from './social-logo/social-logo.component';
 import { UserContentComponent } from './user-content/user-content.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MatButtonModule,
     MatIconModule,
     BrowserAnimationsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
