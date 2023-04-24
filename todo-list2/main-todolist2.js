@@ -1,14 +1,14 @@
 // Initialize an empty array to store todo items
-var todoItems = [];
+let todoItems = [];
 
 // Add item to the list and display it on the screen
 function addItem() {
-    var todoInput = document.getElementById("todoInput");
-    var todoList = document.getElementById("todoList");
+    const todoInput = document.getElementById("todoInput");
+    const todoList = document.getElementById("todoList");
 
     if (todoInput.value !== "") {
         // Create a new object with the todo item and its completed status
-        var todoItem = {
+        const todoItem = {
             item: todoInput.value,
             completed: false
         };
@@ -17,7 +17,7 @@ function addItem() {
         todoItems.push(todoItem);
 
         // Create a new list item element and add the todo item to it
-        var newLi = document.createElement("li");
+        const newLi = document.createElement("li");
         newLi.innerText = todoItem.item;
 
         // Add a click event listener to the list item to toggle its completed status
@@ -42,7 +42,7 @@ function addItem() {
 // Remove completed items from the list
 function removeCompleted() {
     // Create a new array with all uncompleted todo items
-    var newTodoItems = todoItems.filter(function(todo) {
+    const newTodoItems = todoItems.filter(function(todo) {
         return !todo.completed;
     });
 
@@ -50,12 +50,12 @@ function removeCompleted() {
     todoItems = newTodoItems;
 
     // Remove all items from the todoList element
-    var todoList = document.getElementById("todoList");
+    const todoList = document.getElementById("todoList");
     todoList.innerHTML = "";
 
     // Add each uncompleted item back to the todoList element
     todoItems.forEach(function(todo) {
-        var newLi = document.createElement("li");
+        const newLi = document.createElement("li");
         newLi.innerText = todo.item;
 
         newLi.addEventListener("click", function() {
