@@ -42,6 +42,15 @@ function clearInputValue(todoInput) {
     todoInput.value = "";
 }
 
+
+function removeCompletedItemsFromTodoList() {
+    const newTodoItems = todoItems.filter(function (todo) {
+        return !todo.completed;
+    });
+
+    todoItems = newTodoItems;
+}
+
 function addItemToListAndDisplayOnScreen() {
     const todoInput = document.getElementById("todoInput");
     const todoList = document.getElementById("todoList");
@@ -58,18 +67,12 @@ function addItemToListAndDisplayOnScreen() {
     }
 }
 
-function removeCompletedItemsFromList() {
-    // Create a new array with all uncompleted todo items
-    const newTodoItems = todoItems.filter(function(todo) {
-        return !todo.completed;
-    });
+function removeCompletedItemsFromListElement() {
+    removeCompletedItemsFromTodoList();
 
-    // Clear the todoItems array and add back only the uncompleted items
-    todoItems = newTodoItems;
-
-    // Remove all items from the todoList element
     const todoList = document.getElementById("todoList");
     todoList.innerHTML = "";
 
     todoItems.forEach((todo) => createTodoListItemAndAppendToList(todo, todoList));
 }
+
