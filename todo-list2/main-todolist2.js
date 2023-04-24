@@ -1,38 +1,56 @@
 let todoItems = [];
 
+function createNewTodoItem(text) {
+    return {
+        item: text,
+        completed: false
+    };
+}
+
+function addTodoToList(todoItem) {
+    todoItems.push(todoItem);
+}
+
+function createListItemWithTodoData(todoItem) {
+    const newLi = document.createElement("li");
+    newLi.innerText = todoItem.item;
+    return newLi;
+}
+
+function applyToggleEventToListItemClick(newLi, todoItem) {
+    newLi.addEventListener("click", function () {
+        if (!todoItem.completed) {
+            newLi.style.textDecoration = "line-through";
+            todoItem.completed = true;
+        } else {
+            newLi.style.textDecoration = "none";
+            todoItem.completed = false;
+        }
+    });
+}
+
+
+function clearInputValue(todoInput) {
+    todoInput.value = "";
+}
+
 function addItemToListAndDisplayOnScreen() {
     const todoInput = document.getElementById("todoInput");
     const todoList = document.getElementById("todoList");
 
     if (todoInput.value !== "") {
-        // Create a new object with the todo item and its completed status
-        const todoItem = {
-            item: todoInput.value,
-            completed: false
-        };
+        
+        const todoItem = createNewTodoItem(todoInput.value);
 
-        // Add the new object to the todoItems array
-        todoItems.push(todoItem);
+        addTodoToList(todoItem);
 
-        // Create a new list item element and add the todo item to it
-        const newLi = document.createElement("li");
-        newLi.innerText = todoItem.item;
+        const newLi = createListItemWithTodoData(todoItem);
 
-        // Add a click event listener to the list item to toggle its completed status
-        newLi.addEventListener("click", function() {
-            if (!todoItem.completed) {
-                newLi.style.textDecoration = "line-through";
-                todoItem.completed = true;
-            } else {
-                newLi.style.textDecoration = "none";
-                todoItem.completed = false;
-            }
-        });
+        applyToggleEventToListItemClick(newLi, todoItem);
 
         todoList.appendChild(newLi);
 
-        // Clear the input field value
-        todoInput.value = "";
+        clearInputValue(todoInput);
     }
 }
 
