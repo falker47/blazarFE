@@ -69,18 +69,9 @@ function removeCompletedItemsFromList() {
 
     // Add each uncompleted item back to the todoList element
     todoItems.forEach(function(todo) {
-        const newLi = document.createElement("li");
-        newLi.innerText = todo.item;
+        const newLi = createListItemWithTodoData(todo);
 
-        newLi.addEventListener("click", function() {
-            if (!todo.completed) {
-                newLi.style.textDecoration = "line-through";
-                todo.completed = true;
-            } else {
-                newLi.style.textDecoration = "none";
-                todo.completed = false;
-            }
-        });
+        applyToggleEventToListItemClick(newLi, todo);
 
         todoList.appendChild(newLi);
     });
