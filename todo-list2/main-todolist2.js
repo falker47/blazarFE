@@ -29,6 +29,14 @@ function applyToggleEventToListItemClick(newLi, todoItem) {
     });
 }
 
+function createTodoListItemAndAppendToList(todo, todoList) {
+    const newLi = createListItemWithTodoData(todo);
+
+    applyToggleEventToListItemClick(newLi, todo);
+
+    todoList.appendChild(newLi);
+}
+
 
 function clearInputValue(todoInput) {
     todoInput.value = "";
@@ -44,11 +52,7 @@ function addItemToListAndDisplayOnScreen() {
 
         addTodoToList(todoItem);
 
-        const newLi = createListItemWithTodoData(todoItem);
-
-        applyToggleEventToListItemClick(newLi, todoItem);
-
-        todoList.appendChild(newLi);
+        createTodoListItemAndAppendToList(todoItem, todoList)
 
         clearInputValue(todoInput);
     }
@@ -67,12 +71,5 @@ function removeCompletedItemsFromList() {
     const todoList = document.getElementById("todoList");
     todoList.innerHTML = "";
 
-    // Add each uncompleted item back to the todoList element
-    todoItems.forEach(function(todo) {
-        const newLi = createListItemWithTodoData(todo);
-
-        applyToggleEventToListItemClick(newLi, todo);
-
-        todoList.appendChild(newLi);
-    });
+    todoItems.forEach((todo) => createTodoListItemAndAppendToList(todo, todoList));
 }
