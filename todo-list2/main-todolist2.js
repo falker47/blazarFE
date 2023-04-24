@@ -1,8 +1,6 @@
-// Initialize an empty array to store todo items
 let todoItems = [];
 
-// Add item to the list and display it on the screen
-function addItem() {
+function addItemToListAndDisplayOnScreen() {
     const todoInput = document.getElementById("todoInput");
     const todoList = document.getElementById("todoList");
 
@@ -31,7 +29,6 @@ function addItem() {
             }
         });
 
-        // Append the new list item element to the todoList element
         todoList.appendChild(newLi);
 
         // Clear the input field value
@@ -39,8 +36,7 @@ function addItem() {
     }
 }
 
-// Remove completed items from the list
-function removeCompleted() {
+function removeCompletedItemsFromList() {
     // Create a new array with all uncompleted todo items
     const newTodoItems = todoItems.filter(function(todo) {
         return !todo.completed;
