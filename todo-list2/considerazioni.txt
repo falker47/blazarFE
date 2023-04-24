@@ -1,0 +1,2 @@
+Ho effettuato del refactoring sul tuo codice. Fai caso a come progressivamente le duplicazioni sono sparite. 
+Il design è migliorato progressivamente e non ho modificato niente della tua implementazione. 
